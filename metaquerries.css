@@ -37,7 +37,7 @@
     section {
       margin: 0 5%;
     }
-    .section__pic-container {
+    .section_pic-container {
       width: 275px;
       height: 275px;
       margin: 0 auto 2rem;
@@ -87,7 +87,7 @@
       gap: 0.5rem;
       text-align: center;
     }
-    .section__pic-container {
+    .section_pic-container {
       width: auto;
       height: 46vw;
       justify-content: center;
