@@ -9,9 +9,9 @@ var moon = document.getElementById("moon");
 moon.onclick = function () {
   document.body.classList.toggle("dark-button");
   if (document.body.classList.contains("dark-button")) {
-    moon.src = "assets/sun.png";
+    moon.src = "assets/SUN.svg";
   } else {
-    moon.src = "assets/moon.png";
+    moon.src = "assets/MOON.svg";
   }
 };
 
@@ -19,10 +19,10 @@ var mo = document.getElementById("mo");
 mo.onclick = function () {
   document.body.classList.toggle("dark-button");
   if (document.body.classList.contains("dark-button")) {
-    mo.src = "assets/sun.png";
+    mo.src = "assets/SUN.svg";
     
   } else {
-    mo.src = "assets/moon.png";
+    mo.src = "assets/MOON.svg";
   }
 };
 

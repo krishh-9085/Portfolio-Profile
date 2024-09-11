@@ -8,9 +8,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: 0.5s ease, color 0.5s ease;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 p {
   color: rgb(85, 85, 85);
@@ -27,6 +28,7 @@ a,
   width: 30px;
   cursor: pointer;
   float: left;
+  
 }
 #mo {
   width: 30px;
@@ -43,20 +45,6 @@ a,
   --third-color: #ffffff;
   
 }
-/*.social-container .icon {
-  filter: invert(0);
-  transition: filter 0.3s ease;
-  
-}
-
-body.dark-button .social-container .icon {
-  filter: invert(1);
-  
-}
-body:not(.dark-button) .social-container .icon {
-  filter: invert(0);
-}
-  */
 
 nav,
 .nav-links {
@@ -136,6 +124,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+ 
 }
 .menu-links a {
   display: block;
@@ -145,6 +134,7 @@ a:hover {
   color: var(--secondary-color);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
+  
 }
 
 .menu-links li {
@@ -154,6 +144,7 @@ a:hover {
 .menu-links.open {
   max-height: 300px;
   overflow: visible;
+  
 }
 
 .hamburger-icon.open span:first-child {
@@ -229,6 +220,9 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  transition: filter 0.5s ease;
+
+
 }
 .btn-container {
   display: flex;
@@ -292,15 +286,19 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
+  
 }
 
 .about-pic {
   border-radius: 2rem;
+  margin-left: -20%;
+  justify-content: center;
 }
 
 .arrow {
