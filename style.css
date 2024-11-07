@@ -428,6 +428,7 @@ section {
 
 .article-container p {
   background-color: var(--fourth-color);
+  color: var(--fourth-color);
 }
 
 article {
