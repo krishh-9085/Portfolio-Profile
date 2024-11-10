@@ -1,0 +1,675 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+}
+
+
+
+/* Apply fade-in effect to the whole page when content is loaded */
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  background-color: 0.5s ease, color 0.5s ease;
+}
+
+/* Once the page is fully loaded, apply opacity 1 */
+body.loaded {
+  opacity: 1;
+}
+
+/* Fade-in for individual sections on scroll */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Default light mode styles */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/*DESKTOP NAV*/
+#moon {
+  width: 30px;
+  cursor: pointer;
+  float: left;
+}
+
+#sun {
+  width: 30px;
+  cursor: pointer;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --third-color: #353535;
+  --fourth-color: #adacacfd;
+}
+
+.dark-button {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --third-color: #ffffff;
+}
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+#moon {
+  width: 30px;
+  cursor: pointer;
+
+  display: flex;
+}
+
+#moon:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect */
+
+}
+
+#sun {
+  width: 30px;
+  cursor: pointer;
+  margin-left: -35%;
+}
+
+#sun:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect */
+
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  text-decoration-color: var(--secondary-color);
+}
+
+a:hover {
+  color: grey;
+
+  text-underline-offset: 1rem;
+  text-decoration-color: #b5b5b5;
+}
+
+
+/* Logo Container */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  gap: 0.75rem;
+}
+
+/* Logo Icon Hover Effect */
+.icon_b:hover {
+  transform: scale(1.2);
+  /* Slight zoom effect */
+}
+
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: flex
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  background-color: var(--secondary-color);
+  transition: all 0.3 ease-in-out;
+  height: 5px;
+  width: 100%;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--primary-color);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+  
+}
+.menu-links li {
+  list-style: none;
+ 
+}
+
+.menu-links.open {
+  max-height: 300px;
+  overflow: visible;
+}
+
+.hamburger-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section_pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section_text h1 {
+  color: var(--secondary-color);
+}
+
+.section_text {
+  align-self: center;
+  text-align: center;
+}
+
+.section_text p {
+  font-weight: 600;
+}
+
+.section_text_p1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.section_text_p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Social Container Styles */
+.social-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1.5rem;
+  /* Slightly increased gap */
+}
+
+/* Base Icon Styles */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Icons */
+.icon:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect */
+
+}
+
+/* Container styles for buttons */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* This should add space between buttons */
+  background-color: var(--fourth-color);
+}
+
+/* Button styles */
+.btn {
+  color: var(--secondary-color);
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-align: center;
+  border: 0.1rem solid transparent;
+}
+
+/* Color Styles for btn-color-1 and btn-color-2 */
+.btn-color-1,
+.btn-color-2 {
+  border: 0.1rem solid #353535;
+}
+
+.btn-color-1 {
+  background: none;
+}
+
+.btn-color-1:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.btn-color-2 {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-color-2:hover {
+  background: var(--third-color);
+  color: var(--primary-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  border-color: var(--primary-color);
+}
+
+
+/* Active Effects for buttons (click effect) */
+.btn-color-1:active,
+.btn-color-2:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn.btn-color-2.project-btn {
+  background-color: white;
+  border-color: #000000;
+}
+
+.btn.btn-color-2.project-btn:hover {
+  background-color: rgb(0, 0, 0);
+  border-color: #ffffff;
+  color: white;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.title {
+  color: var(--secondary-color);
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+
+}
+
+
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: var(--fourth-color);
+  ;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: var(--secondary-color);
+  text-align: center;
+
+}
+
+.details-container p {
+  color: var(--secondary-color-color);
+}
+
+.details-container h3,
+.details-container p {
+  background-color: var(--fouth-color);
+  ;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section_pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.icon_a {
+  background-color: var(--fourth-color);
+  cursor: pointer;
+  height: 2rem;
+}
+
+.icon_b {
+  cursor: pointer;
+  height: 1.5rem;
+}
+
+.text-container p {
+  color: var(--secondary-color);
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  background-color: var(--fourth-color);
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+  background-color: var(--fourth-color);
+
+}
+
+.article-container h3 {
+  background-color: var(--fourth-color);
+
+}
+
+.article-container p {
+  background-color: var(--fourth-color);
+  color: var(--fourth-color);
+
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+  background-color: var(--fourth-color);
+
+}
+
+article .icon {
+  cursor: default;
+  background-color: var(--fourth-color);
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+/* Base styles for the project buttons */
+
+
+/* Hover effect for the project buttons */
+/* More powerful hover effect for the project buttons */
+.project-btn:hover {
+  background-color: var(--secondary-color);
+  /* Change to secondary color */
+  color: white;
+  /* Text color changes to white */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  /* Stronger shadow for more depth */
+  transform: scale(1.1);
+  /* Increased scale for a more dramatic zoom effect */
+  transition: transform 0.3s cubic-bezier(0.50, 0.1, 0.50, 1), box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Active effect to make the button feel more clickable */
+.project-btn:active {
+  transform: scale(0.95);
+  /* More noticeable shrink effect when clicked */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Stronger shadow when clicked */
+  background-color: var(--tertiary-color);
+  /* Optional: Change to a third color when clicked */
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  /* Quick and sharp transition for active state */
+}
+
+
+.color-container {
+  border-color: var(--secondary-color);
+  background: var(--fourth-color);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+  background-color: var(--fourth-color);
+}
+
+.project-btn {
+  color: rgb(0, 0, 0);
+  border-color: var(--primary-color);
+}
+
+.details-container {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  perspective: 1200px;
+  /* Increased depth for dramatic effect */
+}
+
+.details-container:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  /* Stronger shadow for depth */
+}
+.details-container:active {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  /* Stronger shadow for depth */
+}
+
+/* Gentle scale-up effect for the image */
+.details-container:hover .project-img {
+  transform: scale(1.02);
+  /* Slightly smaller scale for a subtle zoom effect */
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  /* Matches the tilt effect timing */
+}
+.details-container:active .project-img {
+  transform: scale(1.02);
+  /* Slightly smaller scale for a subtle zoom effect */
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  /* Matches the tilt effect timing */
+}
+/* Base styles for the card */
+.details-container {
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition */
+  perspective: 1000px;
+  /* Depth for 3D effect */
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+}
+
+/* Subtle scale effect for images */
+.details-container .project-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Scaling on hover */
+.details-container:hover .project-img {
+  transform: scale(1.05);
+}
+
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.contact-info-container p {
+  font-size: larger;
+  color: var(--secondary-color);
+}
+
+.contact-icon {
+  cursor: default;
+  padding-left: 0.5rem;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
